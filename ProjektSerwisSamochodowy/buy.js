@@ -6,5 +6,7 @@ const akcesoria = {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-alert(document.referrer);
+    var url = document.referrer;
+    var nzw = url.substring(url.lastIndexOf('/') + 1).replace('.html', '');
+    alert(nzw);
 });
