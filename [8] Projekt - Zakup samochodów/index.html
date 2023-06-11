@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+<div>
+    <div id="top">
+        <center><h1 id="tytul-grad">MotoMoto</h1></center>
+        <center><h2 id="h2-grad">Przeglądarka ofert sprzedarzy samochodów</h2></center>
+        <center><h2 id="h2-grad">Sprawdź naszą ofertę!</h2></center>
+    </div>
+</div>
+
+<div id="menu">
+        <input type="search"
+            placeholder="Szukaj..."
+            id="szukaj"
+            class="center"
+            onkeydown="if(event.keyCode==13){document.getElementById('conf').click()};">
+
+        <button onclick="getVal()" id="conf">🔍</button>
+</div>
+
+
+
+    <div id="main-container">
+        <div id="civic" onclick="idzDo(id)">
+        </div>
+
+        <div id="miata" onclick="idzDo(id)">
+        </div>
+
+        <div id="passat" onclick="idzDo(id)">
+        </div>
+
+        <div id="sprinter" onclick="idzDo(id)">
+        </div>
+
+        <div id="mclaren" onclick="idzDo(id)">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

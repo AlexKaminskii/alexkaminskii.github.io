@@ -1,0 +1,130 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+input[type="search"]::-webkit-search-decoration {
+            display: none;
+}
+#szukaj {
+    -webkit-appearance: none;
+    appearance: none;
+    color: white;
+    border: 0;
+    height: 3.5vmin;
+    width: 40vw;
+    background: -webkit-linear-gradient(85deg, #8f03b697, #8f03b69e, #d4b714ae);
+    padding: 1vmax;
+    font-size: 1.75vmin;
+    font-weight: 500;
+}
+#tytul-grad {
+    font-size: 5vw;
+    background: -webkit-linear-gradient(45deg,#d4b714,#8f03b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    }
+#h2-grad {
+    font-size: 2vw;
+    color: rgba(245, 245, 245, 0.69);
+    font-weight: 600;
+}
+#top {
+    width: 100vw;
+    height: 10%;
+}
+
+#menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background: black;
+    height: 10vmin;
+    z-index: 1000;
+}
+body {
+    margin: 0;
+    color: white;
+    background-color: rgb(37, 34, 34);
+    overflow-x: hidden;
+}
+#conf {
+    background:none;
+    border: none;
+    font-size: 1.5vw;
+
+    display: none;
+}
+#min, #max {
+    width: 5vw;
+    height: 4vh;
+    padding: 1vh;
+}
+
+
+.car-img {
+    object-fit: cover;
+    width: 40vh;
+    height: 30vh;
+    border-radius: 1vh;
+    filter: grayscale(.75) blur(1px);
+    transition: .5s;
+}
+.car-img:hover {
+    filter: grayscale(0) blur(0);
+    transition: .5s;
+}
+
+.carinfo {
+    float: right;
+}
+
+.carinfo > h1 {
+    float: right;
+    font-size: 3.3vw;
+}
+
+.carinfo > h3 {
+    font-size: 1.75vw;
+    margin-bottom: 3vh;
+}
+
+#cn {
+    margin-bottom: 3vw;
+    margin-top: 0;
+}
+
+.car {
+    width: 70vw;
+    background-color: #000000;
+    padding: 2.5vw;
+    border-radius: 1vh;
+    transition: 200ms;
+    margin-bottom: 10vh;
+}
+
+.car:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 10px 5px black;
+    transition: .5s;
+}
+
+#main-container {
+    margin-top: 10vh;
+    width: 70vw;
+    margin: 10vw;
+}
+
+
+
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
