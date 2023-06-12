@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="civic.js"></script>
+    <script src="buy.js"></script>
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+    <div id="wszystko">
+        <button id="comeback"
+            onclick="history.back();">Wróc do strony głównej</button>
+        <div id="menuu">
+
+        </div>
+
+
+
+        <div class="gallery-container">
+            <img class="gallery-img"
+                src="sprinter/1.webp"
+                alt="Zdjęcie 1">
+            <br>
+            <center>
+                <span class="prev"
+                    onclick="changeImage(-1)">&#10094;</span>
+                <span class="next"
+                    onclick="changeImage(1)">&#10095;</span>
+            </center>
+            <br><br><br><br><br>
+
+        </div>
+        <script>
+            /*var url = window.location.pathname;
+            var nzw = url.substring(url.lastIndexOf('/') + 1).replace('.html', '');*/
+            const auto = dane.MercedesSprinter;
+            var i = 0;
+            var images = auto.img;
+
+            function changeImage(n) {
+                i += n;
+
+                if (i < 0) {
+                    i = images.length - 1;
+                } else if (i >= images.length) {
+                    i = 0;
+                }
+
+                var img = document.querySelector('.gallery-img');
+                img.src = images[i];
+            }
+        </script>
+
+        <center><button onclick="buy();"
+                id="kup">KUP</button></center>
+
+        <div>
+            <span id="nazwa"></span>
+            <span id="cena"></span>
+        </div>
+        <br>
+
+        <div id="tabela"></div>
+
+
+
+
+        <br><br>
+
+        <div id="kupowanie"
+            style="display: none;">
+            <br><br><br>
+            <table id="l">
+                <tr id="l">
+                    <td id="l"><label for="imie">Imie i nazwisko:</label></td>
+                    <td id="l"><input type="text"
+                            name="imie"
+                            id="imie"
+                            required></td>
+                </tr>
+                <tr id="l">
+                    <td id="l"><label for="datao">Data odbioru:</label></td>
+                    <td id="l"><input type="date"
+                            name="datao"
+                            id="datao"></td>
+                </tr>
+                <tr id="l">
+                    <td id="l"><label for="opony">Opony Zimowe | +2000PLN</label></td>
+                    <td id="l"><input type="checkbox"
+                            name="opony"
+                            id="opony"></td>
+                </tr>
+                <tr id="l">
+                    <td id="l"><label for="gwarancja1">Dodatkowa gwarancja - 1 rok | +5000PLN</label></td>
+                    <td id="l"><input type="checkbox"
+                            name="gwarancja1"
+                            id="gwarancja1"></td>
+                </tr>
+                <tr id="l">
+                    <td id="l"><label for="gwarancja2">Dodatkowa gwarancja - 2 lata | +12000PLN</label></td>
+                    <td id="l"><input type="checkbox"
+                            name="gwarancja2"
+                            id="gwarancja2"></td>
+                </tr>
+            </table>
+
+
+            <center><button onclick="confirm();"
+                    id="confirm">Potwierdź</button></center>
+            <p style="color:red;display:none;"
+                id="wrongname">Niepoprawne imię i nazwisko</p>
+
+            <p style="color:red;display:none;"
+                id="wrongdate">Niepoprawna data</p>
+        </div>
+
+        <!-- Wszystko -->
+    </div>
+    <!-- Wszystko -->
+
+</body>
+
+</html>
