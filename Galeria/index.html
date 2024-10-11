@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geria Zdjęć</title>
+    <style>
+        img {
+            width: 200px;
+            margin: 10px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="change(-1)">Poprzednie</button>
+        <button onclick="change(1)">Następne</button>
+    </div>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+const imgArr = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+let i = 0;
+const g = document.getElementById('gallery');
+
+function update() {
+    g.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = imgArr[i];
+    g.appendChild(img);
+}
+
+function change(a) {
+    const newi = i + a;
+    if (newi >= 0 && newi < imgArr.length) {
+        i = newi;
+        update();
+    }
+}
+
+update();
+
+  
+    </script>
+</body>
+</html>
