@@ -1,0 +1,37 @@
+body {
+    background: #242323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Zapobiega przewijaniu */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35vw; /* Rozmiar szerokości kontenera */
+    height: 40vh; /* Rozmiar wysokości kontenera */
+}
+
+.square {
+    width: calc(10vw - 5px); /* Rozmiar pola */
+    height: calc(10vw - 5px);
+    background-color: #343434;
+    border: none;
+    box-sizing: border-box;
+    margin: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Rozmiar czcionki dla X i O */
+    color: #fff; /* Kolor czcionki */
+    cursor: pointer; /* Zmiana kursora na kliknięcie */
+    transition: background-color 0.3s ease; /* Animacja zmiany koloru */
+}
+
+.square.taken {
+    pointer-events: none; /* Wyłączenie interakcji po zajęciu pola */
+    background-color: #444; /* Kolor po zaznaczeniu */
+}
